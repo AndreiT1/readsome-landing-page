@@ -19,30 +19,30 @@ const interests = [
 ]
 
 const popularBooks = [
-  { id: "atomic-habits", title: "Atomic Habits", author: "James Clear", cover: "/atomic-habits.webp" },
+  { id: "atomic-habits", title: "Atomic Habits", author: "James Clear", cover: "/atomic-habits.png" },
   {
     id: "thinking-fast",
     title: "Thinking, Fast and Slow",
     author: "Daniel Kahneman",
-    cover: "/thinking-fast-and-slow.webp",
+    cover: "/thinking-fast-and-slow.png",
   },
-  { id: "sapiens", title: "Sapiens", author: "Yuval Noah Harari", cover: "/sapiens.webp" },
-  { id: "power-of-habit", title: "The Power of Habit", author: "Charles Duhigg", cover: "/the-power-of-habit.webp" },
+  { id: "sapiens", title: "Sapiens", author: "Yuval Noah Harari", cover: "/sapiens.png" },
+  { id: "power-of-habit", title: "The Power of Habit", author: "Charles Duhigg", cover: "/the-power-of-habit.png" },
   {
     id: "7-habits",
     title: "The 7 Habits of Highly Effective People",
     author: "Stephen Covey",
-    cover: "/7-habits-of-highly.webp",
+    cover: "/7-habits-of-highly.png",
   },
-  { id: "psychology-of-money", title: "The Psychology of Money", author: "Morgan Housel", cover: "/the-psychology-of-money.webp" },
-  { id: "intelligent-investor", title: "The Intelligent Investor", author: "Benjamin Graham", cover: "/the-intelligent-investor.webp" },
+  { id: "psychology-of-money", title: "The Psychology of Money", author: "Morgan Housel", cover: "/the-psychology-of-money.png" },
+  { id: "intelligent-investor", title: "The Intelligent Investor", author: "Benjamin Graham", cover: "/the-intelligent-investor.png" },
   {
     id: "subtle-art",
     title: "The Subtle Art of Not Giving a F*ck",
     author: "Mark Manson",
-    cover: "/the-subtle-art-of-not-giving-a-fak.webp",
+    cover: "/the-subtle-art-of-not-giving-a-fak.png",
   },
-  { id: "think-and-grow-rich", title: "Think and Grow Rich", author: "Napoleon Hill", cover: "/think-and-grow-rich.webp" },
+  { id: "think-and-grow-rich", title: "Think and Grow Rich", author: "Napoleon Hill", cover: "/think-and-grow-rich.png" },
 ]
 
 const readingGoals = [
