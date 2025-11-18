@@ -11,18 +11,18 @@ const popularBooks1 = [
   { id: "thinking-fast", title: "Thinking, Fast and Slow", author: "Daniel Kahneman", cover: "/thinking-fast-and-slow.png" },
   { id: "sapiens", title: "Sapiens", author: "Yuval Noah Harari", cover: "/sapiens.png" },
   { id: "power-of-habit", title: "The Power of Habit", author: "Charles Duhigg", cover: "/the-power-of-habit.png" },
-  { id: "7-habits", title: "The 7 Habits of Highly Effective People", author: "Stephen Covey", cover: "/7-habits-of-highly.png" },
+  // { id: "7-habits", title: "The 7 Habits of Highly Effective People", author: "Stephen Covey", cover: "/7-habits-of-highly.png" },
   { id: "psychology-of-money", title: "The Psychology of Money", author: "Morgan Housel", cover: "/the-psychology-of-money.png" },
-  { id: "intelligent-investor", title: "The Intelligent Investor", author: "Benjamin Graham", cover: "/the-intelligent-investor.png" },
+  // { id: "intelligent-investor", title: "The Intelligent Investor", author: "Benjamin Graham", cover: "/the-intelligent-investor.png" },
 ]
 
 const popularBooks2 = [
   { id: "subtle-art", title: "The Subtle Art of Not Giving a F*ck", author: "Mark Manson", cover: "/the-subtle-art-of-not-giving-a-fak.png" },
   { id: "think-and-grow-rich", title: "Think and Grow Rich", author: "Napoleon Hill", cover: "/think-and-grow-rich.png" },
-  { id: "lean-startup", title: "The Lean Startup", author: "Eric Ries", cover: "/the-lean-startup.png" },
+  // { id: "lean-startup", title: "The Lean Startup", author: "Eric Ries", cover: "/the-lean-startup.png" },
   { id: "black-swan", title: "The Black Swan", author: "Nassim Taleb", cover: "/the-black-swan.png" },
   { id: "tipping-point", title: "The Tipping Point", author: "Malcolm Gladwell", cover: "/the-tipping-point.png" },
-  { id: "good-to-great", title: "Good to Great", author: "Jim Collins", cover: "/good-to-great.png" },
+  // { id: "good-to-great", title: "Good to Great", author: "Jim Collins", cover: "/good-to-great.png" },
   { id: "how-to-win-friends", title: "How to Win Friends and Influence People", author: "Dale Carnegie", cover: "/how-to-win-friends.png" },
 ]
 
@@ -30,8 +30,8 @@ const popularBooks3 = [
   { id: "body-keeps-score", title: "The Body Keeps the Score", author: "Bessel van der Kolk", cover: "/the-body-keeps-the-score.png" },
   { id: "quiet", title: "Quiet", author: "Susan Cain", cover: "/quiet.png" },
   { id: "cosmos", title: "Cosmos", author: "Carl Sagan", cover: "/cosmos.png" },
-  { id: "selfish-gene", title: "The Selfish Gene", author: "Richard Dawkins", cover: "/the-selfish-gene.png" },
-  { id: "brief-history-time", title: "A Brief History of Time", author: "Stephen Hawking", cover: "/A-Brief-History-of-Time.png" },
+  // { id: "selfish-gene", title: "The Selfish Gene", author: "Richard Dawkins", cover: "/the-selfish-gene.png" },
+  // { id: "brief-history-time", title: "A Brief History of Time", author: "Stephen Hawking", cover: "/A-Brief-History-of-Time.png" },
   { id: "being-mortal", title: "Being Mortal", author: "Atul Gawande", cover: "/being-mortal.png" },
   { id: "invisible-women", title: "Invisible Women", author: "Caroline Criado Perez", cover: "/invisible-women.png" },
 ]
