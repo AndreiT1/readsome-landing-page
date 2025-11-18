@@ -8,24 +8,10 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Readsome - Daily free book summaries',
-  description: 'Discover key insights from the world\'s best nonfiction books and podcasts. Learn faster, remember more.',
+  description: 'Discover key insights from the world\'s best nonfiction books. Learn faster, remember more.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/favicon.svg',
   },
 }
 

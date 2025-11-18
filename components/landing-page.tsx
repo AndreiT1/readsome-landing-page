@@ -81,38 +81,39 @@ const testimonials = [
   },
 ]
 
-const stats = [
-  { value: "10M+", label: "Active readers" },
-  { value: "5,000+", label: "Book summaries" },
-  { value: "15 min", label: "Average read time" },
-  { value: "4.8★", label: "App store rating" },
-]
+// Stats removed for pre-launch
+// const stats = [
+//   { value: "21+", label: "Summaries at launch" },
+//   { value: "15 min", label: "Per summary" },
+//   { value: "iOS & Android", label: "Mobile apps" },
+//   { value: "Free", label: "Early access" },
+// ]
 
 const MarqueeRow = memo(function MarqueeRow({ items, speed }: { items: typeof popularBooks1, speed: number }) {
   return (
-    <div className="marquee overflow-hidden w-full flex h-52">
+    <div className="marquee overflow-hidden w-full flex h-40 lg:h-52">
       <div
         className="marquee-track flex flex-shrink-0"
         style={{ animationDuration: `${speed}s` }}
       >
-        <div className="marquee__group flex gap-4 flex-shrink-0 pr-4">
+        <div className="marquee__group flex gap-3 lg:gap-4 flex-shrink-0 pr-3 lg:pr-4">
           {items.map((book, idx) => (
             <div key={`a-${idx}`} className="flex-shrink-0 transition-transform hover:scale-105">
               <img
                 src={book.cover}
                 alt={book.title}
-                className="w-[128px] aspect-[2/3] rounded-xl shadow-lg"
+                className="w-24 lg:w-32 aspect-[2/3] rounded-xl shadow-lg"
               />
             </div>
           ))}
         </div>
-        <div className="marquee__group flex gap-4 flex-shrink-0 pr-4" aria-hidden="true">
+        <div className="marquee__group flex gap-3 lg:gap-4 flex-shrink-0 pr-3 lg:pr-4" aria-hidden="true">
           {items.map((book, idx) => (
             <div key={`b-${idx}`} className="flex-shrink-0 transition-transform hover:scale-105">
               <img
                 src={book.cover}
                 alt={book.title}
-                className="w-[128px] aspect-[2/3] rounded-xl shadow-lg"
+                className="w-24 lg:w-32 aspect-[2/3] rounded-xl shadow-lg"
               />
             </div>
           ))}
@@ -206,9 +207,9 @@ export default function LandingPage() {
                 <a href="#testimonials" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                   Reviews
                 </a>
-                <Button variant="ghost" size="sm" className="justify-start">
+                {/* <Button variant="ghost" size="sm" className="justify-start">
                   Log in
-                </Button>
+                </Button> */}
                 {/* <Button size="sm" onClick={() => setShowOnboarding(true)}>
                   Get Started
                 </Button> */}
@@ -219,8 +220,13 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-12 md:py-20 lg:py-28">
+      <section className="py-16 md:py-20 lg:py-28">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          {/* Mobile Only - Books at Top */}
+          <div className="lg:hidden mb-8">
+            <MarqueeRow items={row1} speed={25} />
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center">
             {/* Left Column - Content */}
             <div className="space-y-8 text-center lg:text-left">
@@ -234,7 +240,7 @@ export default function LandingPage() {
               </h1>
 
               <p className="text-lg xl:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
-                Discover key insights from the world's best nonfiction books and podcasts. Learn faster, remember more, and transform your life.
+                Discover key insights from the world's best nonfiction books and. Learn faster, remember more, and transform your life.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -249,18 +255,18 @@ export default function LandingPage() {
                 </Button>
               </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8">
+              {/* Stats - Removed for pre-launch */}
+              {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8">
                 {stats.map((stat, idx) => (
                   <div key={idx} className="space-y-1">
                     <div className="text-2xl sm:text-3xl xl:text-4xl font-bold text-primary">{stat.value}</div>
                     <div className="text-sm text-muted-foreground">{stat.label}</div>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
 
-            {/* Right Column - Marquee Books */}
+            {/* Desktop Only - Right Column Marquee Books */}
             <div className="relative hidden lg:block space-y-6 overflow-hidden">
               <MarqueeRow items={row1} speed={25} />
               <MarqueeRow items={row2} speed={22} />
@@ -277,7 +283,7 @@ export default function LandingPage() {
       {/* Features Section */}
       <section id="features" className="py-16 md:py-24 bg-secondary/20">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-          <div className="text-center space-y-4 mb-12 md:mb-16">
+          <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance">Why readers love Readsome</h2>
             <p className="text-lg text-muted-foreground text-balance max-w-2xl mx-auto leading-relaxed">
               Everything you need to build a daily learning habit and expand your knowledge
@@ -301,7 +307,7 @@ export default function LandingPage() {
       {/* How It Works Section */}
       <section id="how-it-works" className="py-16 md:py-24">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-          <div className="text-center space-y-4 mb-12 md:mb-16">
+          <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance">Start learning in 3 simple steps</h2>
             <p className="text-lg text-muted-foreground text-balance max-w-2xl mx-auto leading-relaxed">
               Get started with Readsome and transform the way you learn
@@ -443,7 +449,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-12">
+      <footer className="border-t border-border py-16">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="grid md:grid-cols-4 gap-8 xl:gap-12">
             <div className="space-y-4">

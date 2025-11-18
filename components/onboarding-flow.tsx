@@ -357,11 +357,11 @@ export default function OnboardingFlow() {
               Back
             </Button>
           )}
-          {step === 0 && (
+          {/* {step === 0 && (
             <Button onClick={() => { }} variant="ghost" size="lg" className="w-full">
               Log in
             </Button>
-          )}
+          )} */}
         </div>
       </div>
     </div>
