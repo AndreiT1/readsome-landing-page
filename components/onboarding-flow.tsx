@@ -118,7 +118,7 @@ export default function OnboardingFlow() {
                     animation: scroll-left 30s linear infinite;
                   }
                 `}</style>
-                
+
                 {/* Row 1 - Slow */}
                 <div className="flex gap-2 mb-2 animate-scroll-slow">
                   {[...popularBooks.slice(0, 3), ...popularBooks.slice(0, 3), ...popularBooks.slice(0, 3)].map((book, idx) => (
@@ -164,7 +164,7 @@ export default function OnboardingFlow() {
                   <span className="text-primary">15 min</span>
                 </h1>
                 <p className="text-lg text-muted-foreground text-balance max-w-md mx-auto leading-relaxed">
-                  Key insights from nonfiction bestsellers and podcasts, curated just for you.
+                  Key insights from nonfiction bestsellers, curated just for you.
                 </p>
               </div>
             </div>
@@ -358,7 +358,7 @@ export default function OnboardingFlow() {
             </Button>
           )}
           {step === 0 && (
-            <Button onClick={() => {}} variant="ghost" size="lg" className="w-full">
+            <Button onClick={() => { }} variant="ghost" size="lg" className="w-full">
               Log in
             </Button>
           )}
