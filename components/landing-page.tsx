@@ -126,6 +126,9 @@ const MarqueeRow = memo(function MarqueeRow({ items, speed }: { items: typeof po
 export default function LandingPage() {
   const [showOnboarding, setShowOnboarding] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [email, setEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   if (showOnboarding) {
     return <OnboardingFlow />
@@ -134,6 +137,38 @@ export default function LandingPage() {
   const row1 = popularBooks1
   const row2 = popularBooks2
   const row3 = popularBooks3
+
+  const handleWaitlistSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('https://sheetdb.io/api/v1/erea0rnfbkrw3', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          data: {
+            email: email,
+            date: new Date().toISOString().split('T')[0], // Format: YYYY-MM-DD
+          }
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setEmail('')
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -386,18 +421,31 @@ export default function LandingPage() {
             </div>
 
             <Card className="p-6 md:p-8 bg-card">
-              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); }}>
+              <form className="space-y-4" onSubmit={handleWaitlistSubmit}>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <input
                     type="email"
                     placeholder="Enter your email"
                     required
-                    className="flex-1 px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    disabled={isSubmitting}
+                    className="flex-1 px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50"
                   />
-                  <Button size="lg" className="text-lg h-12 px-8 font-semibold whitespace-nowrap">
-                    Join Waitlist
+                  <Button size="lg" type="submit" disabled={isSubmitting} className="text-lg h-12 px-8 font-semibold whitespace-nowrap">
+                    {isSubmitting ? 'Joining...' : 'Join Waitlist'}
                   </Button>
                 </div>
+                {submitStatus === 'success' && (
+                  <p className="text-sm text-primary font-medium">
+                    ✓ Thanks! You've been added to the waitlist.
+                  </p>
+                )}
+                {submitStatus === 'error' && (
+                  <p className="text-sm text-destructive">
+                    Something went wrong. Please try again.
+                  </p>
+                )}
                 <p className="text-sm text-muted-foreground">
                   We respect your privacy. Unsubscribe at any time.
                 </p>
