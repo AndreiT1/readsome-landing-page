@@ -327,12 +327,12 @@ export default function LandingPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
             {features.map((feature, idx) => (
-              <Card key={idx} className="p-6 xl:p-8 space-y-4 hover:shadow-lg transition-shadow bg-card text-center">
-                <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center mx-auto">
+              <Card key={idx} className="p-6 xl:p-8 hover:shadow-lg transition-shadow bg-card text-center flex flex-col h-full">
+                <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className={`text-xl font-semibold ${feature.title === "Personalized recommendations" ? "whitespace-nowrap" : ""}`}>{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-muted-foreground leading-relaxed flex-grow">{feature.description}</p>
               </Card>
             ))}
           </div>
