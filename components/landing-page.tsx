@@ -4,7 +4,6 @@ import { useState, memo } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { BookOpen, Clock, Sparkles, TrendingUp, Users, Zap, Check, Menu, X } from 'lucide-react'
-import { cn } from "@/lib/utils"
 import OnboardingFlow from "@/components/onboarding-flow"
 
 const popularBooks1 = [
@@ -60,26 +59,6 @@ const features = [
   },
 ]
 
-const testimonials = [
-  {
-    name: "Sarah Johnson",
-    role: "Entrepreneur",
-    content: "This app has transformed how I learn. I've finished more books in 3 months than I did all last year.",
-    rating: 5,
-  },
-  {
-    name: "Michael Chen",
-    role: "Product Manager",
-    content: "The perfect solution for busy professionals. I finally have time to keep learning without sacrificing my schedule.",
-    rating: 5,
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Marketing Director",
-    content: "The quality of summaries is outstanding. It's like having a personal librarian who knows exactly what I need.",
-    rating: 5,
-  },
-]
 
 // Stats removed for pre-launch
 // const stats = [
@@ -239,9 +218,6 @@ export default function LandingPage() {
                 <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                   How It Works
                 </a>
-                <a href="#testimonials" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-                  Reviews
-                </a>
                 {/* <Button variant="ghost" size="sm" className="justify-start">
                   Log in
                 </Button> */}
@@ -258,7 +234,7 @@ export default function LandingPage() {
       <section className="py-16 md:py-20 lg:py-28">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           {/* Mobile Only - Books at Top */}
-          <div className="lg:hidden mb-8">
+          <div className="lg:hidden mb-12">
             <MarqueeRow items={row1} speed={25} />
           </div>
 
