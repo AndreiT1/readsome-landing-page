@@ -51,12 +51,12 @@ const features = [
   {
     icon: TrendingUp,
     title: "Track Your Progress",
-    description: "Set daily reading goals and watch your knowledge grow with detailed insights.",
+    description: "Set daily goals and watch your learning streak grow with simple insights.",
   },
   {
     icon: Users,
-    title: "Personalized recommendations",
-    description: "Enjoy daily content collections tailored to your needs",
+    title: "Personalized Recommendations",
+    description: "Get daily picks tailored to your interests and reading habits.",
   },
 ]
 
@@ -271,11 +271,11 @@ export default function LandingPage() {
               </div> */}
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold">
-                Master powerful ideas in <span className="text-primary">15 minutes</span>
+                Learn powerful ideas in <span className="text-primary">15 minutes</span>
               </h1>
 
               <p className="text-lg xl:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
-                Discover key insights from the world's best nonfiction books and. Learn faster, remember more, and transform your life.
+                Discover key insights from the world's best nonfiction books. Learn faster, remember more, and transform your life.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -351,9 +351,9 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-3 gap-8 xl:gap-12 max-w-6xl mx-auto">
             {[
-              { step: "1", title: "Choose Your Interests", description: "Select topics you care about and we'll personalize your library" },
-              { step: "2", title: "Set Your Goals", description: "Decide how much time you want to spend learning each day" },
-              { step: "3", title: "Start Reading", description: "Enjoy bite-sized summaries you can finish in 15 minutes" },
+              { step: "1", title: "Choose Your Interests", description: "Pick the topics you want to grow in and we'll build your personal library." },
+              { step: "2", title: "Set Your Goals", description: "Decide how much time you want to learn each day — even 10 minutes works." },
+              { step: "3", title: "Start Reading", description: "Enjoy concise, 15-minute summaries you can read or listen to anywhere." },
             ].map((item, idx) => (
               <div key={idx} className="relative">
                 {idx < 2 && (
@@ -416,7 +416,7 @@ export default function LandingPage() {
             <div className="space-y-4">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-balance">Join the Waitlist</h2>
               <p className="text-lg md:text-xl text-muted-foreground text-balance leading-relaxed">
-                Be among the first to experience Readsome. Get early access and exclusive updates when we launch.
+                Be among the first to experience Readsome. Get early access, feature previews, and special launch pricing.
               </p>
             </div>
 
@@ -425,7 +425,7 @@ export default function LandingPage() {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder="you@example.com"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -508,7 +508,7 @@ export default function LandingPage() {
                 <span className="text-xl font-bold">Readsome</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Empowering readers to learn faster and smarter with bite-sized book summaries.
+                Helping readers learn faster, think deeper, and grow every day.
               </p>
             </div>
 
