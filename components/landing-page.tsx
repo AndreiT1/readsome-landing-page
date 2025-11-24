@@ -194,9 +194,9 @@ export default function LandingPage() {
               <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 How It Works
               </a>
-              <Button size="sm" onClick={() => setShowOnboarding(true)}>
+              {/* <Button size="sm" onClick={() => setShowOnboarding(true)}>
                 Get Started
-              </Button>
+              </Button> */}
             </div>
 
             {/* Mobile Menu Button */}
@@ -218,9 +218,9 @@ export default function LandingPage() {
                 <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                   How It Works
                 </a>
-                <Button size="sm" onClick={() => setShowOnboarding(true)}>
+                {/* <Button size="sm" onClick={() => setShowOnboarding(true)}>
                   Get Started
-                </Button>
+                </Button> */}
               </div>
             </div>
           )}
@@ -341,12 +341,6 @@ export default function LandingPage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button size="lg" className="text-lg h-14 px-8 font-semibold" onClick={() => setShowOnboarding(true)}>
-              Get Started Now
-            </Button>
           </div>
         </div>
       </section>
