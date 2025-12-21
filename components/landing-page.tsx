@@ -180,7 +180,7 @@ export default function LandingPage() {
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center justify-between h-18">
             <div className="flex items-center gap-4">
-              <img src="/logo-512x512.svg" alt="Logo" className="w-10 h-10" />
+              <img src="/logo-512x512.png" alt="Logo" className="w-10 h-10" />
               <span className="text-2xl font-bold">Readsome</span>
             </div>
 
@@ -481,7 +481,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-4 gap-8 xl:gap-12">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <img src="/logo-512x512.svg" alt="Logo" className="w-10 h-10" />
+                <img src="/logo-512x512.png" alt="Logo" className="w-10 h-10" />
                 <span className="text-2xl font-bold">Readsome</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
